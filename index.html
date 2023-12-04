@@ -4,9 +4,80 @@
         <title>Stephanie Armond's Personal Website</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .item1 { 
+                grid-area: header; 
+            }
+            .item2 { 
+                grid-area: menu; 
+            }
+            .item3 { 
+                grid-area: main; 
+                padding-left: 10px;
+            }
+            .item4 { 
+                grid-area: right; 
+            }
+            .item5 { 
+                grid-area: footer; 
+            }
+            
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'header header header header header header'
+                    'menu main main main right right'
+                    'menu footer footer footer footer footer';
+                gap: 3px;
+                background-color: #6F00FF;
+                padding: 3px;
+            }
+            
+            .grid-container > div {
+                background-color: #B2FFFF;
+                text-align: left;
+                padding: 20px 20;
+                font-size: 30px;
+            }
+
+            .container {
+                display: flex;
+            }
+
+            .logo-name {
+                font-weight:700 !important;
+                padding-top: 0px !important;
+                text-align: left;
+            }
+
+            .logo-side {
+                text-align: right;
+                padding-right: 10px;
+            }
+
+            .logo-img {
+                display: block;
+                margin-left: 0;
+                margin-right: 30px;
+            }
+            </style>
     </head>
-    <body style="background-color:#bfecc1; font-family:consolas;">
-        <h1>Stephanie (Steph) Armond</h1>
-        <p></p>
+    <body style="background-color:#B2FFFF; font-family:consolas;">
+        <div class="grid-container">
+            <div class="item1">
+                <div class="container">
+                    <img class="logo-img" src="https://drive.google.com/uc?export=view&id=1Ug9r6dnXOff39RB1E5p6fxv8sTeoth9Z" alt="Headshot" style="width:256px;height:256px">
+                    <h1 class="logo-name">Stephanie (Steph) Armond</h1>
+                    <p class="logo-side">GitHub</p>
+                </div>
+            </div>
+            <div class="item2">Menu</div>
+            <div class="item3">
+                <h2>About Me</h2>
+                <p>blah blah blah</p>
+            </div>  
+            <div class="item4">Right</div>
+            <div class="item5">Footer</div>
+        </div>
     </body>
 </html> 
